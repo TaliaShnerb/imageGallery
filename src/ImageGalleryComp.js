@@ -4,18 +4,16 @@ import './ImageGalleryComp.css';
 
 const ImageGallery = () => {
   const [photos, setPhotos] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const photosPerPage = 20;
+ 
 
   useEffect(() => {
     const fetchPhotos = async () => {
-      const res = await axios.get(`https://jsonplaceholder.typicode.com/photos?_start=${(currentPage - 1) * photosPerPage}&_limit=${photosPerPage}`);
+      const res = await axios.get(`https://jsonplaceholder.typicode.com/photos?_start=0&_limit=20`);
       setPhotos(res.data);
     };
     fetchPhotos();
-  }, [currentPage]);
+  }, []);
 
-  const totalPages = Math.ceil(5000 / photosPerPage); 
 
   return (
     <div className="app">
