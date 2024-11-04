@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .photo {
+    border: 2px solid black;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.5);   
+    overflow: hidden;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: auto;
+  }
+  
+ 
+  
